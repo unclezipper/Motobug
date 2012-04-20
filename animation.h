@@ -67,7 +67,7 @@ Animation::update(int dly) {
 			return frames[curframe];
 		}
 	} else {
-		self.counter--
+		self.counter--;
 		return frames[curframe];
 	}
 }
@@ -83,7 +83,7 @@ Animation::play(int dly) {
 			return frames[curframe];
 		}
 	} else {
-		self.counter--
+		self.counter--;
 		return frames[curframe];
 	}
 }

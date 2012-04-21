@@ -40,8 +40,8 @@ class Animation {
 		int maxframe;
 	public:
 		Animation(vector<SDL_surface> f);
-		SDL_Surface update(int dly);
-		SDL_Surface play(int dly);
+		virtual SDL_Surface update(int dly);
+		virtual SDL_Surface play(int dly);
 		SDL_Surface get_frame(unsigned int i);
 		SDL_Surface get_firstframe();
 		SDL_Surface get_lastframe();
@@ -56,7 +56,7 @@ Animation::Animation(vector<SDL_surface> f) {
 }
 
 Animation::update(int dly) {
-	if (counter == NULL) { counter = 0; }
+	if (curframe == NULL) { counter = dly; curframe = 0;}
 	if (counter <= 0) {
 		counter = dly;
 		if (curfame == maxframe) {
@@ -73,7 +73,7 @@ Animation::update(int dly) {
 }
 
 Animation::play(int dly) {
-	if (counter == NULL) { counter = 0; }
+	if (curframe == NULL) { counter = dly; curframe = 0;}
 	if (counter <= 0) {
 		counter = dly;
 		if (curfame == maxframe) {

@@ -56,10 +56,10 @@ class Rectangle: protected Terrain {
 		
 		Rectangle(point o, unsigned int w, unsigned int h) :
 		Terrain(o,w,h) {
-		add_vector(x,y,x+w,y);
-		add_vector(x+w,y,x+w,y+h);
-		add_vector(x+w,y+h,x,y+h);
-		add_vector(x,y+h,x,y);
+		add_vector(o.x,o.y,o.x+w,o.y);
+		add_vector(o.x+w,o.y,o.x+w,o.y+h);
+		add_vector(o.x+w,o.y+h,o.x,o.y+h);
+		add_vector(o.x,o.y+h,o.x,o.y);
 		};
 		
 		virtual ~Rectangle();

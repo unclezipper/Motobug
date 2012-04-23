@@ -1,7 +1,7 @@
 #ifndef _ANIMATION_H_
 #define _ANIMATION_H_
 #include <vector>
-#include <SDL/sdl.h>
+#include <SDL/SDL.h>
 #include "mbexcept.h"
 
 // Bill: I will be adding more classes to this header.
